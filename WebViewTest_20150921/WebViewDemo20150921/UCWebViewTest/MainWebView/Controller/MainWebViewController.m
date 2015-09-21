@@ -360,6 +360,7 @@ static const CGFloat kBottomToolBarHeight = 40.f;
 #pragma mark UIWebViewDelegate
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
+    NSLog(@"===didFailLoadWithError===\n%@", error);
     self.isLastLoadingSucc = NO;
     
     UIAlertView *failAlertView = [[[UIAlertView alloc] initWithTitle:@"打开网页" message:@"打开网页时出错了" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] autorelease];
