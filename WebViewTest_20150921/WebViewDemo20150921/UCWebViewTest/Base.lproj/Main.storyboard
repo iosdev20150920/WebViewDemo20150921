@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Web View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MainWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqf-hb-6yA">
+                                <rect key="frame" x="0.0" y="64" width="320" height="440"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyI-t7-kw0">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem enabled="NO" image="UIButtonBarArrowLeft.png" id="8Ns-OG-vmA">
+                                        <connections>
+                                            <action selector="actionGoBack:" destination="vXZ-lx-hvc" id="uoA-1w-9XX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aru-Qa-zh4"/>
+                                    <barButtonItem tag="20" enabled="NO" image="UIButtonBarArrowRight.png" id="z4F-6v-NiW">
+                                        <connections>
+                                            <action selector="actionGoForward:" destination="vXZ-lx-hvc" id="OjE-zu-xKt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1XY-6K-Ykt"/>
+                                    <barButtonItem image="UIButtonBarAction.png" id="bTk-wM-ZZw">
+                                        <connections>
+                                            <action selector="actioinFileManagement:" destination="vXZ-lx-hvc" id="xJ4-yk-tcY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ith-cm-Dqu"/>
+                                    <barButtonItem image="UIButtonBarBookmarks.png" id="MqH-z2-ZRI">
+                                        <connections>
+                                            <action selector="actionHistory:" destination="vXZ-lx-hvc" id="Z32-10-uoG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="i0K-iG-rMy"/>
+                                    <barButtonItem image="TabButtoniphone.png" id="7TO-PZ-Yz0">
+                                        <connections>
+                                            <action selector="actionPagination:" destination="vXZ-lx-hvc" id="fjU-Ik-NJ1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bqf-hb-6yA" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" constant="24" id="97v-dK-Ul7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cyI-t7-kw0" secondAttribute="trailing" constant="-16" id="Hs3-Aa-1ll"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cyI-t7-kw0" secondAttribute="bottom" id="IBt-aT-249"/>
+                            <constraint firstAttribute="trailing" secondItem="bqf-hb-6yA" secondAttribute="trailing" id="WNA-c2-5mY"/>
+                            <constraint firstItem="bqf-hb-6yA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="44" id="dGy-zg-E83"/>
+                            <constraint firstItem="cyI-t7-kw0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="vOC-Ox-KqU"/>
+                            <constraint firstItem="bqf-hb-6yA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xEg-R7-7V7"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabButtoniphone.png" width="24" height="24"/>
+        <image name="UIButtonBarAction.png" width="19" height="26"/>
+        <image name="UIButtonBarArrowLeft.png" width="11" height="21"/>
+        <image name="UIButtonBarArrowRight.png" width="11" height="21"/>
+        <image name="UIButtonBarBookmarks.png" width="26" height="23"/>
+    </resources>
+</document>
